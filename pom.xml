@@ -40,6 +40,7 @@
       <module>seata-order-service2001</module>
       <module>seata-order-service2002</module>
       <module>seata-order-service2003</module>
+    <module>cloud-product-testpersion</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -57,9 +58,10 @@
 
   </properties>
 
-  <!-- 子模块继承之后，提供作用：锁定版本+子modlue不用写groupId和version
-  加入dependencyManagement 这个标签，只是声明依赖，并不是“实现引入”。
-  如果刚创建这个工程，请看jar包引入，只有jdk的东西，没有下面引入的东西
+  <!-- 子模块继承之后，提供作用：锁定版本+子modlue不用写groupId和version。
+  加入dependencyManagement ，只是声明依赖，并不是真正的“实现引入”。因此子项目需要显示声明的需要用的依赖，
+  如果子项目不声明依赖，是不会从父项目中继承下来的（如果是创建这个工程，请看jar包引入，只有jdk的东西，没有下面引入的东西）
+  只有子项目写了依赖项，并且没有指定版本，才会从父项目中继承该项，并且version和scope都读取父pom文件内容
   -->
   <dependencyManagement>
     <dependencies>
