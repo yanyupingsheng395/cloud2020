@@ -6,10 +6,10 @@ spring:
     name: consul-provider-payment
   cloud:
     consul:
-      host: 192.168.0.60
+      host: 192.168.1.60
       port: 8500
       discovery:
         service-name: ${spring.application.name}
         #注意：如果你不是本机安装的consul，务必加上hostname.以及**你本机（不是安装consul的那个机器，是本机）**的IP地址。
         #如果不加，该工程启动后，在consul控制台界面，consul检测会报错
-        hostname: 192.168.0.6
+        hostname: 192.168.1.102

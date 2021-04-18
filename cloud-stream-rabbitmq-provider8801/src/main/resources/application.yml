@@ -12,7 +12,7 @@ spring:
           environment: # 设置rabbitmq的相关的环境配置
             spring:
               rabbitmq:
-                host: 192.168.0.60
+                host: 192.168.1.60
                 port: 5672
                 username: guest
                 password: guest

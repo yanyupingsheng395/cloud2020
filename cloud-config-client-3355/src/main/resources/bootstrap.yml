@@ -11,7 +11,7 @@ spring:
       profile: dev    #读取后缀名称  上述3个综合：master分支上config-dev.yml的配置文件被读取。类似：http://config-3344.com:3344/master/config-dev.yml
       uri: http://localhost:3344   #因为3344是总控，3355属于客户端。只有3344连接了github。其他的例如3355、3366就从3344上读取
   rabbitmq:
-    host: 192.168.0.60
+    host: 192.168.1.60
     port: 5672
     username: guest
     password: guest

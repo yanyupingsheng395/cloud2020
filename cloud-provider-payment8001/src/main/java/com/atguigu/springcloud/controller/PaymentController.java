@@ -46,6 +46,13 @@ public class PaymentController {
         }
     }
 
+    /**
+     * 输出内容
+     * ***** element:cloud-payment-service
+     * ***** element:cloud-order-service
+     * ***服务IP地址192.168.239.1***服务名称CLOUD-PAYMENT-SERVICE ***服务端口号8002**服务url http://192.168.239.1:8002
+     * ***服务IP地址192.168.239.1***服务名称CLOUD-PAYMENT-SERVICE ***服务端口号8001**服务url http://192.168.239.1:8001
+     */
     @GetMapping(value = "/payment/discovery")
     public Object discovery(){
         //获取所有注册到eureka中的微服务
@@ -59,13 +66,6 @@ public class PaymentController {
             log.info("***服务IP地址"+instance.getHost()+"\t***服务名称"+instance.getServiceId()+"\t***服务端口号"+instance.getPort()+"\t**服务url" +
                     instance.getUri());
         }
-        /**
-         * 输出内容
-         * ***** element:cloud-payment-service
-         * ***** element:cloud-order-service
-         * ***服务IP地址192.168.239.1***服务名称CLOUD-PAYMENT-SERVICE ***服务端口号8002**服务url http://192.168.239.1:8002
-         * ***服务IP地址192.168.239.1***服务名称CLOUD-PAYMENT-SERVICE ***服务端口号8001**服务url http://192.168.239.1:8001
-         */
         return this.discoveryClient;
     }
 

@@ -15,4 +15,4 @@ ribbon:
 logging:
   level:
     #你需要监控的哪个类，以及什么级别
-    com.atguigu.springcloud.service.PaymentFeignService: debug
+    com.atguigu.springcloud.service.*: debug

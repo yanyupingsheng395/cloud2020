@@ -11,15 +11,20 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class FlowLimitController
 {
+
     @GetMapping("/testA")
+//    @SentinelResource("testA")
     public String testA() {
         return "------testA";
     }
 
     @GetMapping("/testB")
+//    @SentinelResource("testB")
     public String testB() {
         return "------testB";
     }
+
+    @SentinelResource
     @GetMapping("/testE")
     public String testE()
     {
